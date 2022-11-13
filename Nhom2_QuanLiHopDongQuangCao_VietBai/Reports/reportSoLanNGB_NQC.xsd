@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reportSoLanNGB_NQC" targetNamespace="http://tempuri.org/reportSoLanNGB_NQC.xsd" xmlns:mstns="http://tempuri.org/reportSoLanNGB_NQC.xsd" xmlns="http://tempuri.org/reportSoLanNGB_NQC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BTL_LTTQConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BTL_LTTQConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Nhom2_QuanLiHopDongQuangCao_VietBai.Properties.Settings.GlobalReference.Default.BTL_LTTQConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportSoLanNGB_NQCTableAdapter" GeneratorDataComponentClassName="reportSoLanNGB_NQCTableAdapter" Name="reportSoLanNGB_NQC" UserDataComponentName="reportSoLanNGB_NQCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BTL_LTTQConnectionString (Settings)" DbObjectName="dbo.reportSoLanNGB_NQC" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaNV, TenNV, SoLanGui, SoLanQuangCao FROM dbo.reportSoLanNGB_NQC()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaNV" DataSetColumn="MaNV" />
+              <Mapping SourceColumn="TenNV" DataSetColumn="TenNV" />
+              <Mapping SourceColumn="SoLanGui" DataSetColumn="SoLanGui" />
+              <Mapping SourceColumn="SoLanQuangCao" DataSetColumn="SoLanQuangCao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="reportSoLanNGB_NQC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="reportSoLanNGB_NQC" msprop:Generator_DataSetName="reportSoLanNGB_NQC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="reportSoLanNGB_NQC" msprop:Generator_RowEvHandlerName="reportSoLanNGB_NQCRowChangeEventHandler" msprop:Generator_RowDeletedName="reportSoLanNGB_NQCRowDeleted" msprop:Generator_RowDeletingName="reportSoLanNGB_NQCRowDeleting" msprop:Generator_RowEvArgName="reportSoLanNGB_NQCRowChangeEvent" msprop:Generator_TablePropName="_reportSoLanNGB_NQC" msprop:Generator_RowChangedName="reportSoLanNGB_NQCRowChanged" msprop:Generator_RowChangingName="reportSoLanNGB_NQCRowChanging" msprop:Generator_TableClassName="reportSoLanNGB_NQCDataTable" msprop:Generator_RowClassName="reportSoLanNGB_NQCRow" msprop:Generator_TableVarName="tablereportSoLanNGB_NQC" msprop:Generator_UserTableName="reportSoLanNGB_NQC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaNV" msprop:Generator_ColumnPropNameInRow="MaNV" msprop:Generator_ColumnPropNameInTable="MaNVColumn" msprop:Generator_ColumnVarNameInTable="columnMaNV" msprop:Generator_UserColumnName="MaNV">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenNV" msprop:Generator_ColumnPropNameInRow="TenNV" msprop:Generator_ColumnPropNameInTable="TenNVColumn" msprop:Generator_ColumnVarNameInTable="columnTenNV" msprop:Generator_UserColumnName="TenNV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoLanGui" msprop:Generator_ColumnPropNameInRow="SoLanGui" msprop:Generator_ColumnPropNameInTable="SoLanGuiColumn" msprop:Generator_ColumnVarNameInTable="columnSoLanGui" msprop:Generator_UserColumnName="SoLanGui" type="xs:int" minOccurs="0" />
+              <xs:element name="SoLanQuangCao" msprop:Generator_ColumnPropNameInRow="SoLanQuangCao" msprop:Generator_ColumnPropNameInTable="SoLanQuangCaoColumn" msprop:Generator_ColumnVarNameInTable="columnSoLanQuangCao" msprop:Generator_UserColumnName="SoLanQuangCao" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
