@@ -196,6 +196,21 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.Forms
                 MessageBox.Show("Bạn không được để trống mã lĩnh vực hoạt động!");
                 return;
             }
+            if (txtDiaChi.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không được để trống địa chỉ!");
+                return;
+            }
+            if (txtDienThoai.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không được để trống điện thoại!");
+                return;
+            }
+            if (txtEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không được để trống email!");
+                return;
+            }
             if (btnThem_KH.Enabled == true)
             {
                 sql = "Select * from KhachHang where" + " MaKH = '" + txtMaKH.Text.Trim() + "'";

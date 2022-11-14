@@ -190,6 +190,21 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
                 MessageBox.Show("Ngày sinh không hợp lệ!");
                 return;
             }
+            if (txtGioiTinh.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không để trống giới tính!");
+                return;
+            }
+            if(txtDienThoai.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không để trống điện thoại!");
+                return;
+            }
+            if (txtEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn không để trống email!");
+                return;
+            }
             if (btnThem_NV.Enabled == true)
             {
                 sql = "Select * from NhanVien where" + " MaNV = '" + txtMaNV.Text.Trim() + "'";
