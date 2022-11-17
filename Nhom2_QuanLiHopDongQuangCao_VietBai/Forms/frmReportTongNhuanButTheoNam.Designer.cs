@@ -114,7 +114,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmReportTongNhuanButTheoNam";
-            this.Text = "frmReportTongNhuanButTheoNam";
+            this.Text = "Báo cáo tổng nhuận bút theo năm";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

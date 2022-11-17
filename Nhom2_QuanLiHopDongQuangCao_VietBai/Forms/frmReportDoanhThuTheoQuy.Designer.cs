@@ -134,7 +134,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmReportDoanhThuTheoQuy";
-            this.Text = "frmReportDoanhThuTheoQuy";
+            this.Text = "Báo cáo doanh thu theo quý";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

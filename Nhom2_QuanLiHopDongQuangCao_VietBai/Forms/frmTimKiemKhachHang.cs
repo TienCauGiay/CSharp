@@ -122,6 +122,7 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.Forms
             btnThem_KH.Enabled = false;
             btnXoa_KH.Enabled = false;
             HienChiTiet(true);
+            txtMaKH.Enabled = false;
         }
 
         private void btnXoa_KH_Click(object sender, EventArgs e)
@@ -217,14 +218,24 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.Forms
                 DataTable dt = database.docBang(sql);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Mã khách hàng " + txtMaKH.Text + " đã tồn tại, vui lòng nhập lại!");
+                    MessageBox.Show("Mã khách hàng " + txtMaKH.Text + " đã tồn tại, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
                 else
                 {
-                    sql = "insert into KhachHang values ('" + txtMaKH.Text + "',N'" +
-                        txtTenKH.Text + "','" + txtMaLVHD.Text + "',N'" + txtDiaChi.Text + "',N'" +
-                        txtDienThoai.Text + "','" + txtEmail.Text + "')";
+                    sql = $"select * from LinhVucHoatDong where MaLVHD = N'{txtMaLVHD.Text}'";
+                    DataTable dt2 = database.docBang(sql);
+                    if (dt2.Rows.Count > 0)
+                    {
+                        sql = "insert into KhachHang values ('" + txtMaKH.Text + "',N'" +
+                            txtTenKH.Text + "','" + txtMaLVHD.Text + "',N'" + txtDiaChi.Text + "',N'" +
+                            txtDienThoai.Text + "','" + txtEmail.Text + "')";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã lĩnh vực hoạt động " + txtMaLVHD.Text + " không tồn tại tồn tại, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
                 }
             }
             if (btnSua_KH.Enabled == true)

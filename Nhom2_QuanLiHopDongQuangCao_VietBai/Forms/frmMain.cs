@@ -24,6 +24,7 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
 
         private void openChildForm(Form childForm)
         {
+            panel_Body.BackgroundImage = null;
             if (currentChildform != null)
             {
                 currentChildform.Close();
@@ -109,6 +110,8 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
                 currentChildform.Close();
             }
             lbTieuDe.Text = "Chương Trình Quản Lí Hợp Đồng Quảng Cáo + Viết Bài";
+
+            panel_Body.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Images\\AnhPanelBody.JPG");
         }
 
         private void tìmKiếmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -461,6 +464,11 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
             dgvKhachGuiBai.Columns[6].Width = 200;
             dgvKhachGuiBai.Columns[7].Width = 150;
             dgvKhachGuiBai.Columns[8].Width = 200;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

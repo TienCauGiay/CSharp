@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(1101, 519);
             this.Controls.Add(this.rpvSoLanNGB_NQC);
             this.Name = "frmReportSoLanNGB_NQC";
-            this.Text = "frmReportSoLanNGB_NQC";
+            this.Text = "Báo cáo số lần gửi bài và nhận quảng cáo của các nhân viên";
             this.Load += new System.EventHandler(this.frmReportSoLanNGB_NQC_Load);
             this.ResumeLayout(false);
 

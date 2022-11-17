@@ -36,6 +36,7 @@
             this.btnThem_KH = new System.Windows.Forms.Button();
             this.btnTimKiem_KH = new System.Windows.Forms.Button();
             this.grbChiTietKH = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grbChiTietKH.SuspendLayout();
             this.grbTimKiemKH.SuspendLayout();
@@ -180,11 +180,26 @@
             this.grbChiTietKH.TabStop = false;
             this.grbChiTietKH.Text = "Chi tiết khách hàng";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = global::Nhom2_QuanLiHopDongQuangCao_VietBai.Properties.Resources.Luu1;
+            this.btnLuu.Location = new System.Drawing.Point(20, 373);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(124, 39);
+            this.btnLuu.TabIndex = 31;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(159, 331);
+            this.txtEmail.Location = new System.Drawing.Point(89, 331);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 26);
+            this.txtEmail.Size = new System.Drawing.Size(237, 26);
             this.txtEmail.TabIndex = 30;
             // 
             // txtDienThoai
@@ -368,21 +383,6 @@
             this.dgvKhachHang.Size = new System.Drawing.Size(768, 251);
             this.dgvKhachHang.TabIndex = 7;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = global::Nhom2_QuanLiHopDongQuangCao_VietBai.Properties.Resources.Luu1;
-            this.btnLuu.Location = new System.Drawing.Point(20, 373);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(124, 39);
-            this.btnLuu.TabIndex = 31;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmTimKiemKhachHang
             // 

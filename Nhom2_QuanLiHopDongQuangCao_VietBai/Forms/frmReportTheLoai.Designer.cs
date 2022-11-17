@@ -66,6 +66,7 @@
             // 
             // btnBaoCao
             // 
+            this.btnBaoCao.BackColor = System.Drawing.SystemColors.Control;
             this.btnBaoCao.Image = global::Nhom2_QuanLiHopDongQuangCao_VietBai.Properties.Resources.Report;
             this.btnBaoCao.Location = new System.Drawing.Point(538, 36);
             this.btnBaoCao.Name = "btnBaoCao";
@@ -74,7 +75,7 @@
             this.btnBaoCao.Text = "Report";
             this.btnBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.UseVisualStyleBackColor = false;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // label1

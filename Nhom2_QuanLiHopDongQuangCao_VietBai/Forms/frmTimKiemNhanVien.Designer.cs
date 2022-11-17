@@ -205,9 +205,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(159, 334);
+            this.txtEmail.Location = new System.Drawing.Point(82, 334);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 26);
+            this.txtEmail.Size = new System.Drawing.Size(244, 26);
             this.txtEmail.TabIndex = 30;
             // 
             // txtDienThoai

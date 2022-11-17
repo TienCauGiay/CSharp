@@ -211,11 +211,55 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
                 DataTable dt = database.docBang(sql);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Mã nhân viên " + txtMaNV.Text + " đã tồn tại, vui lòng nhập lại!");
+                    MessageBox.Show("Mã nhân viên " + txtMaNV.Text + " đã tồn tại, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
                 else
                 {
+                    sql = $"select * from PhongBan where MaB = N'{txtMaB.Text}' and MaP = N'{txtMaP.Text}'";
+                    DataTable dtPB = database.docBang(sql);
+                    sql = $"select * from ChucVu where MaCV = N'{txtMaCV.Text}'";
+                    DataTable dtCV = database.docBang(sql);
+                    sql = $"select * from TrinhDo where MaTD = N'{txtMaTD.Text}'";
+                    DataTable dtTD = database.docBang(sql);
+                    sql = $"select * from ChuyenMon where MaCM = N'{txtMaCM.Text}'";
+                    DataTable dtCM = database.docBang(sql);
+                    if(dtPB.Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại phòng ban có mã báo " + txtMaB.Text + " và mã phòng " + txtMaP.Text+ ", vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+                    if (dtCV.Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại chức vụ có mã chức vụ " + txtMaCV.Text + ", vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+                    if (dtTD.Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại trình độ có mã trình độ " + txtMaTD.Text + ", vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+                    if (dtCM.Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tồn tại chuyên môn có mã chuyên môn " + txtMaCM.Text + ", vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
                     sql = "insert into NhanVien values (N'" + txtMaNV.Text + "',N'" + txtTenNV.Text + "',N'"
                     + txtMaB.Text + "',N'" + txtMaP.Text + "',N'" + txtMaCV.Text + "',N'" + txtMaTD.Text + "',N'"
                     + txtMaCM.Text + "',N'" + txtDiaChi.Text + "','" + dtpNgaySinh.Value.Date + "',N'"
@@ -272,6 +316,7 @@ namespace Nhom2_QuanLiHopDongQuangCao_VietBai.bin.Debug.Forms
             btnThem_NV.Enabled = false;
             btnXoa_NV.Enabled = false;
             HienChiTiet(true);
+            txtMaNV.Enabled = false;
         }
 
         private void btnXoa_NV_Click(object sender, EventArgs e)
